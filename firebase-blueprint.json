@@ -1,0 +1,93 @@
+{
+  "entities": {
+    "Client": {
+      "collection": "users/{userId}/clients",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "fullName": { "type": "string" },
+        "businessOrDocument": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "category": { "type": "string" },
+        "address": { "type": "string" },
+        "colonyOrSector": { "type": "string" },
+        "city": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "napBoxId": { "type": "string" },
+        "napPort": { "type": "number" },
+        "opticalPowerDbm": { "type": "number" },
+        "dropMeters": { "type": "number" },
+        "oltNode": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "fullName", "phone", "category", "createdAt"]
+    },
+    "Service": {
+      "collection": "users/{userId}/clients/{clientId}/services",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "clientId": { "type": "string" },
+        "planName": { "type": "string" },
+        "downloadSpeedMbps": { "type": "number" },
+        "uploadSpeedMbps": { "type": "number" },
+        "monthlyCost": { "type": "number" },
+        "installationDate": { "type": "string" },
+        "ontModel": { "type": "string" },
+        "ontSerial": { "type": "string" },
+        "wifiSsid": { "type": "string" },
+        "wifiPassword": { "type": "string" },
+        "status": { "type": "string" },
+        "technicianName": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "clientId", "planName", "monthlyCost", "status", "createdAt"]
+    },
+    "Invoice": {
+      "collection": "users/{userId}/clients/{clientId}/invoices",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "clientId": { "type": "string" },
+        "invoiceNumber": { "type": "string" },
+        "concept": { "type": "string" },
+        "amount": { "type": "number" },
+        "paidAmount": { "type": "number" },
+        "issueDate": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "paymentDate": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "status": { "type": "string" },
+        "receiptFolio": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "clientId", "invoiceNumber", "concept", "amount", "status", "createdAt"]
+    },
+    "Worker": {
+      "collection": "users/{userId}/workers",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "role": { "type": "string" },
+        "assignedZone": { "type": "string" },
+        "status": { "type": "string" },
+        "employeeNumber": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "fullName", "email", "role", "createdAt"]
+    }
+  }
+}

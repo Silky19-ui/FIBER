@@ -1,0 +1,6 @@
+{
+  "name": "FiberCRM Telecom",
+  "description": "CRM de clientes y leads para empresas de servicios de internet por fibra óptica con estados de cuenta, servicios y ubicación",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
