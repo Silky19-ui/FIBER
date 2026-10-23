@@ -23,9 +23,8 @@ jobs:
     - name: ⚙️ Configurar Android SDK
       uses: android-actions/setup-android@v4
 
-    # REEMPLAZA "nombre-de-la-carpeta" por la carpeta real donde está tu proyecto
-    - name: 🔑 Dar permisos y compilar
-      working-directory: ./nombre-de-la-carpeta 
+    - name: 🔑 Dar permisos de ejecución y compilar dentro de fiber
+      working-directory: ./fiber
       run: |
         chmod +x gradlew
         ./gradlew assembleDebug
@@ -34,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: nombre-de-la-carpeta/app/build/outputs/apk/debug/app-debug.apk
+        path: fiber/app/build/outputs/apk/debug/app-debug.apk
